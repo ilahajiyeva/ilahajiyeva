@@ -2,333 +2,356 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ilahajiyeva | portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy|Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .masthead {
-            background-image: url("https://data.whicdn.com/images/336493790/original.jpg");
+        /*header*/
+        header {
+            background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/dusky-pink-sky-jt-images.jpg");
             background-repeat: no-repeat;
             background-size: cover;
-            width: 100%;
-            height: 600px;
             background-position: center;
         }
-        .portfolio img {
-            transition: .7s ease;
+
+        .navbar .navbar-brand {
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            font-family: 'Satisfy', cursive;
         }
-        .portfolio:hover  img{
-            transform: scale(0.5);
-            opacity: 0.5;
+
+        .navbar .navbar-brand:hover {
+            color: silver;
         }
-        .portfolio:hover .image-cap{
-            opacity: 1;
-        }
-        .image-cap {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-            transition: .7s ease;
-        }
-        .fa {
-            padding: 15px;
+
+        .navbar-nav .nav-item .nav-link {
+            color: white;
             font-size: 20px;
-            width: 50px;
+            font-family: 'Sedgwick Ave Display', cursive;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            color: silver;
+        }
+
+        .dropdown-menu {
+            font-family: 'Sedgwick Ave Display', cursive;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        .masthead .fa-laptop-code, h2 {
+            margin-top: 200px;
+
+        }
+
+        .masthead h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            font-family: 'EB Garamond', serif;
+            letter-spacing: 2px;
+        }
+
+        .masthead .row {
+            margin-bottom: 40px;
+        }
+
+        .masthead .btn {
+            background-color: transparent !important;
+            font-family: 'EB Garamond', serif;
+        }
+
+        .masthead .btn:hover {
+            background-color: #9fcdff !important;
+        }
+
+        /*portfolio*/
+        .pic {
+            height: 200px;
+        }
+
+        .image {
+            background: white;
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .pic-caption {
             text-align: center;
-            text-decoration: none;
-            margin: 5px 2px;
-            border-radius: 50%;
+            padding: 10px 20px;
         }
-        .fa:hover {
-            opacity: 0.7;
-            color: white;
-            text-decoration: none;
+
+        /*contact*/
+        .fab:hover {
+            opacity: 0.8;
         }
-        .fa-facebook {
-            background: #3B5998;
-            color: white;
+
+        /*scroll navbar*/
+        .background-nav {
+            background-color: rgba(255,255,255,0.8);
         }
-        .fa-twitter {
-            background: #3B5998;
-            color: white;
+        .background-nav .navbar-brand{
+            color: black;
+            font-size: 20px;
         }
-        .fa-linkedin {
-            background: #3B5998;
-            color: white;
+        .background-nav .nav-item > .nav-link {
+            color: black;
+            font-size: 15px;
         }
     </style>
 </head>
-<body class="bg-dark" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<!--Menu-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<body data-spy="scroll" data-offset="50" data-target=".navbar">
 
-    <a href="#home" class="navbar-brand">Logo</a>
-
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar" type="button">
+<!--header-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a href="#home" class="navbar-brand ml-4">Site Logo</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar">Menu
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="collapse navbar-collapse text-uppercase" id="navbar">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a href="#home" class="nav-link">Home</a>
+                <a class="nav-link active" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a href="#about" class="nav-link">About</a>
+                <a class="nav-link" href="#about">About Us</a>
             </li>
             <li class="nav-item">
-                <a href="#services" class="nav-link">Sevices</a>
+                <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item dropdown">
-                <a href="#projects" class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropID">Projects</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">Portfolio</a>
                 <div class="dropdown-menu">
-                    <a href="#first" class="dropdown-item">First</a>
-                    <a href="#second" class="dropdown-item">Second</a>
-                    <a href="#third" class="dropdown-item">Third</a>
-                    <a href="#fourth" class="dropdown-item">Fourth</a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item disabled">Fifth</a>
+                    <a href="#portfolio" class="dropdown-item">Portfolio</a>
+                    <a href="#portfolio" class="dropdown-item">Portfolio</a>
+                    <a href="#portfolio" class="dropdown-item">Portfolio</a>
+                    <a href="#portfolio" class="dropdown-item">Portfolio</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a href="#contact" class="nav-link">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
         </ul>
     </div>
 </nav>
 
-<!--header-->
-<header class="masthead d-flex" id="home">
-    <div class="container text-center text-white my-auto">
-        <h2 class="mb-2">Hello World</h2>
-        <h3 class="mb-5">
-            <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
-        </h3>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#">Find More</a>
+<header class="masthead p-5" id="home">
+    <div class="container">
+        <div class="row text-center text-white">
+            <div class="col-md-5 offset-md-1 mb-0">
+                <h2 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
+                    quo inventore
+                    harum
+                    ex magni, dicta impedit.</h2>
+                <button class="btn btn-light text-white px-5 py-2 mb-5" style="border-radius: 15px" type="button">View
+                    More
+                </button>
+            </div>
+            <div class="col-md-4 ">
+                <i class="fas fa-laptop-code fa-10x"></i>
+            </div>
+        </div>
     </div>
-    <div class="overlay"></div>
 </header>
 
 <!--About-->
-<div class="container mt-5 text-center" id="about">
-    <h3 class="text-white mt-3 mb-2">About Us</h3>
-    <h4 class="text-white-50 mb-5">
-        <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-            voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit
-            vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</em>
-    </h4>
-    <a class="btn btn-info btn-xl js-scroll-trigger mb-5" href="#">Learn More</a>
-</div>
-
-<hr>
-
-<!--Services-->
-<section class="content-section text-center" id="services">
-    <div class="container">
+<section class="content-section bg-dark text-white text-center" id="about">
+    <div class="container-fluid">
         <div class="content-section-heading">
-            <h3 class="text-white mt-3 mb-2">Services</h3>
-            <h4 class="text-white-50 mb-5">
-                <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
-            </h4>
+            <h2 class="mt-0 p-3" style="font-family: 'Sedgwick Ave Display', cursive;">About Us</h2>
+            <em class="text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem</em>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-2 offset-md-1">
+                <i class="fas fa-mobile-alt fa-10x"></i>
+            </div>
+            <div class="col-md-8 mt-3">
+                <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+            </div>
         </div>
         <div class="row">
-            <div class="col-md-3 mt-4 ml-0">
-                 <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                 </span>
-                <h4 class="text-white mt-2">
-                    <strong>E-Commerce</strong>
-                </h4>
-                <p class="text-muted">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum
-                    ex magni, dicta impedit.
-                </p>
+            <div class="col-md-8 offset-md-1 mt-5">
+                <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
             </div>
-            <div class="col-md-3 mt-4 ml-0">
-                 <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                 </span>
-                <h4 class="text-white mt-2">
-                    <strong>Responsive Design</strong>
-                </h4>
-                <p class="text-muted">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum
-                    ex magni, dicta impedit.
-                </p>
-            </div>
-            <div class="col-md-3 mt-4 ml-0">
-                 <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                 </span>
-                <h4 class="text-white mt-2">
-                    <strong>E-Commerce</strong>
-                </h4>
-                <p class="text-muted">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum
-                    ex magni, dicta impedit.
-                </p>
-            </div>
-            <div class="col-md-3 mt-4 ml-0">
-                 <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                 </span>
-                <h4 class="text-white mt-2">
-                    <strong>Responsive Design</strong>
-                </h4>
-                <p class="text-muted">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum
-                    ex magni, dicta impedit.
-                </p>
+            <div class="col-md-2 fa-10x">
+                <i class="fas fa-tv"></i>
             </div>
         </div>
     </div>
 </section>
-<hr>
 
-<!--projects-->
-<section class="content-section" id="project">
+<!--Services-->
+<section class="content-section text-center bg-light" id="services">
     <div class="container">
-        <div class="content-section-heading mt-5">
-            <h3 class="text-white text-center">Projects</h3>
-            <h4 class="text-muted text-center">
-                <em>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </em>
-            </h4>
+        <div class="content-section-heading">
+            <h2 class="mt-0 p-3" style="font-family: 'Sedgwick Ave Display', cursive;">Services</h2>
+            <em class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem</em>
         </div>
-        <div class="row no-gutters">
-            <div class="col-md-6 mt-4 portfolio" id="first">
-                <a href="#" class="portfolio-item">
-                    <img src="https://data.whicdn.com/images/336545107/superthumb.jpg?t=1571646719" alt="" class="w-100">
-                </a>
-                <div class="image-cap text-white">
-                    <h5>
-                        <em>First Project</em>
-                    </h5>
-                </div>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <i class="far fa-credit-card fa-10x"></i>
+                <h3 class="mt-2" style="font-family: 'EB Garamond', serif; color: #f416b1">Credit Card</h3>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet,
+                    consectetur
+                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit.</p>
             </div>
-            <div class="col-md-6 mt-4 portfolio">
-                <a href="#" class="portfolio-item" id="second">
-                    <img src="https://data.whicdn.com/images/335675777/superthumb.jpg?t=1569482245" alt="" class="w-100">
-                </a>
-                <div class="image-cap text-white">
-                    <h5>
-                        <em>Second Project</em>
-                    </h5>
-                </div>
+            <div class="col-md-4">
+                <i class="fas fa-balance-scale fa-10x"></i>
+                <h3 class="mt-2" style="font-family: 'EB Garamond', serif; color: #f416b1">Balance</h3>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet,
+                    consectetur
+                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit.</p>
             </div>
-        </div>
-        <div class="row no-gutters">
-            <div class="col-md-6 portfolio" id="third">
-                <a href="#" class="portfolio-item">
-                    <img src="https://data.whicdn.com/images/335675791/superthumb.jpg?t=1569482271" alt="" class="w-100">
-                </a>
-                <div class="image-cap text-white">
-                    <h5>
-                        <em>Third Project</em>
-                    </h5>
-                </div>
-            </div>
-            <div class="col-md-6 portfolio" id="fourth">
-                <a href="#" class="portfolio-item">
-                    <img src="https://data.whicdn.com/images/302836954/superthumb.jpg?t=1512683121" alt="" class="w-100">
-                </a>
-                <div class="image-cap text-white">
-                    <h5>
-                        <em>Fourth Project</em>
-                    </h5>
-                </div>
+            <div class="col-md-4">
+                <i class="fas fa-layer-group fa-10x"></i>
+                <h3 class="mt-2" style="font-family: 'EB Garamond', serif; color: #f416b1">Design</h3>
+                <p class="lead mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
+                    amet, consectetur
+                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit.</p>
             </div>
         </div>
-    </div>
     </div>
 </section>
 
-<!--Contact-->
-<section class="content-section mt-5" id="contact">
-    <div class="content-section-heading">
-        <h3 class="text-center text-white">Contact</h3>
-        <h4 class="text-muted text-center">
-            <em>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </em>
-        </h4>
-    </div>
+<!--portfolio-->
+<section class="content-section text-center bg-success" id="portfolio">
     <div class="container-fluid">
-            <form class="mt-5 needs-validation" novalidate action="#">
-                <div class="form-group text-white">
-                    <div class="row">
-                        <div class="col-md-4 offset-md-2">
-                            <label for="fullName">Your Full Name</label>
-                            <input type="text" class="form-control" id="fullName" required>
-                            <div class="valid-feedback"></div>
-                            <div class="invalid-feedback">Please enter your full name.</div>
-                        </div>
-                        <div class="col-md-4 offset-md-2 ml-md-0">
-                            <label for="email">Your Email address</label>
-                            <input type="email" class="form-control" id="email" required>
-                            <div class="valid-feedback"></div>
-                            <div class="invalid-feedback">Please enter an email address.</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 offset-md-2 mb-3">
-                            <label for="message">Your Message</label>
-                            <textarea class="form-control" id="message" rows="6" required></textarea>
-                            <div class="valid-feedback"></div>
-                            <div class="invalid-feedback">Please enter a message.</div>
-                        </div>
-                        <div class="col-md-2"></div>
+        <div class="content-section-heading">
+            <h2 class="text-white mt-0 p-3" style="font-family: 'Sedgwick Ave Display', cursive;">Portfolio</h2>
+            <em class="text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-3 mt-2">
+                <div class="image">
+                    <img src="https://data.whicdn.com/images/337161211/original.jpg" alt=""
+                         class="d-block w-100 pic rounded">
+                    <div class="pic-caption">
+                        <a href="#">Lorem ipsum dolor sit amet.</a>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-3 mt-2">
+                <div class="image">
+                    <img src="https://data.whicdn.com/images/337067494/original.jpg" alt=""
+                         class="d-block w-100 pic rounded">
+                    <div class="pic-caption">
+                        <a href="#">Lorem ipsum dolor sit amet.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mt-2">
+                <div class="image">
+                    <img src="https://data.whicdn.com/images/337103865/original.jpg" alt=""
+                         class="d-block w-100 pic rounded">
+                    <div class="pic-caption">
+                        <a href="#">Lorem ipsum dolor sit amet.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-5 mt-2">
+                <div class="image">
+                    <img src="https://data.whicdn.com/images/337112723/original.jpg" alt=""
+                         class="d-block w-100 pic rounded">
+                    <div class="pic-caption">
+                        <a href="#">Lorem ipsum dolor sit amet.</a>
+                    </div>
+                </div>
+            </div>
 
-                <div class="row">
-                    <div class="col-md-5 offset-md-5">
-                        <button class="btn btn-danger btn-lg mb-5" type="submit">Send Message</button>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-            </form>
+        </div>
     </div>
 </section>
 
-<footer class="footer bg-light w-100 text-center">
-    <div class="container-fluid mt-5">
-        <span class="ml-5">Copyright@2019</span>
-        <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
-        <a href="https://twitter.com" target="_blank" class="fa fa-twitter"></a>
-        <a href="https://linkedin.com" target="_blank" class="fa fa-linkedin"></a>
+<!--contact-->
+<section class="content-section text-center bg-light" id="contact">
+    <div class="container">
+        <div class="content-section-heading">
+            <h2 class="mt-0 p-3" style="font-family: 'Sedgwick Ave Display', cursive;">Contact</h2>
+            <em class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem</em>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <a href="#">
+                    <i class="fab fa-facebook fa-10x" style="color: #3B5998;"></i>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#">
+                    <i class="fab fa-twitter fa-10x" style="color: #55ACEE"></i>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#">
+                    <i class="fab fa-instagram fa-10x" style="color: #d728ab"></i>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#">
+                    <i class="fab fa-linkedin fa-10x" style="color: #007bb5"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row mt-5 text-muted mb-4">
+            <div class="col-md-7 offset-md-2">
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="https://www.google.com/maps/place/Baker+St,+Marylebone,+London,+UK/@51.5206185,-0.1588731,17z/data=!4m5!3m4!1s0x48761ace9a2e67d7:0xd458de8d0fdc498e!8m2!3d51.5205217!4d-0.1567595"
+                target="_blank">
+                    221b Baker street, London UK!
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<footer class="footer bg-dark p-3 text-white text-center">
+    <span>Copyright &copy;2019</span>
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <a href="#" class="text-danger">Terms</a><br>
+                <a href="#" class="text-danger">Privacy Policy</a><br>
+                <a href="#" class="text-danger">Lorem Ipsum</a><br>
+                <a href="#" class="text-danger">Lorem Ipsum</a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="text-danger">Lorem Ipsum</a><br>
+                <a href="#" class="text-danger">Lorem Ipsum</a><br>
+                <a href="#" class="text-danger">Lorem Ipsum</a><br>
+                <a href="#" class="text-danger">Lorem Ipsum</a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="text-danger">Lorem Ipsum</a><br>
+                <a href="#" class="text-danger">Lorem Ipsum</a><br>
+                <a href="#" class="text-danger">Lorem Ipsum</a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="text-danger">Lorem Ipsum</a>
+            </div>
+        </div>
     </div>
 </footer>
-
-
-<script>
-    (function () {
-        'use strict';
-        window.addEventListener("load", function () {
-            var forms = document.getElementsByClassName("needs-validation");
-            var validation = Array.prototype.filter.call(forms, function (form) {
-                form.addEventListener('submit', function (e) {
-                    if (form.checkValidity() === false) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                    }
-                    form.classList.add("was-validated");
-                }, false);
-            });
-        }, false);
-    })();
-</script>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -342,5 +365,14 @@
         crossorigin="anonymous"></script>
 
 
+<script>
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop()) {
+            $('.navbar').addClass('background-nav');
+        } else {
+            $('.navbar').removeClass('background-nav');
+        }
+    });
+</script>
 </body>
 </html>
