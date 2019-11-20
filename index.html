@@ -6,354 +6,431 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Satisfy|Sedgwick+Ave+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Itim|Just+Another+Hand|Leckerli+One&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="jquery/lightbox2-dev/dist/css/lightbox.css">
+    <script src="jquery/lightbox2-dev/dist/js/lightbox-plus-jquery.js"></script>
     <style>
-        /*header*/
-        header {
-            background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/dusky-pink-sky-jt-images.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+        .navbar-brand {
+            font-size: 25px;
+            font-family: 'Leckerli One', cursive;
         }
 
-        .navbar .navbar-brand {
-            color: white;
-            font-weight: bold;
-            font-size: 30px;
-            font-family: 'Satisfy', cursive;
-        }
-
-        .navbar .navbar-brand:hover {
-            color: silver;
-        }
-
-        .navbar-nav .nav-item .nav-link {
-            color: white;
+        .nav-link {
+            font-family: 'Itim', cursive;
             font-size: 20px;
-            font-family: 'Sedgwick Ave Display', cursive;
         }
 
-        .navbar-nav .nav-item .nav-link:hover {
-            color: silver;
+        .nav-link:hover {
+            color: white !important;
         }
 
-        .dropdown-menu {
-            font-family: 'Sedgwick Ave Display', cursive;
-            background-color: rgba(0, 0, 0, 0.5);
+        .lang {
+            color: black;
+            border: 1px solid black;
+            padding: 7px;
+            font-size: 12px;
+            border-radius: 8px;
         }
 
-        .dropdown-item {
+        .lang:hover {
             color: white;
         }
 
-        .masthead .fa-laptop-code, h2 {
-            margin-top: 200px;
-
-        }
-
-        .masthead h2 {
-            font-size: 2rem;
-            font-weight: 300;
-            font-family: 'EB Garamond', serif;
-            letter-spacing: 2px;
-        }
-
-        .masthead .row {
-            margin-bottom: 40px;
-        }
-
-        .masthead .btn {
-            background-color: transparent !important;
-            font-family: 'EB Garamond', serif;
-        }
-
-        .masthead .btn:hover {
-            background-color: #9fcdff !important;
-        }
-
-        /*portfolio*/
         .pic {
-            height: 200px;
+            box-sizing: border-box;
+            box-shadow: 0 5px 8px 0 black;
+            opacity: 0.6;
+            transition: transform .7s;
+            width: 230px;
         }
 
-        .image {
+        .pic:hover {
+            transform: scale(1.5);
+        }
+
+        .image-cap h3 {
+            color: white;
+            font-family: 'Itim', cursive;
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+        }
+
+        .image-cap p {
+            position: absolute;
+            top: 60%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: 'Itim', cursive;
+        }
+
+        .image-cap .btn {
+            position: absolute;
+            top: 73%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: 'Itim', cursive;
+        }
+
+        .image-cap a {
+            position: absolute;
+            top: 85%;
+            left: 28%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: 'Itim', cursive;
+        }
+
+        .image-cap1 h3 {
+            color: white;
+            font-family: 'Itim', cursive;
+            position: absolute;
+            top: 70%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+
+        }
+
+        .image-cap1 p {
+            position: absolute;
+            top: 80%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: 'Itim', cursive;
+        }
+
+        h3, p {
+            font-family: 'Itim', cursive;
+        }
+
+        .border-right {
+            border-right: 3px solid rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .portfolio-modal {
+            border: 1px solid white;
             background: white;
-            position: relative;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+            filter: grayscale(100%);
+            transform: 1s;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px 0 #b7b7b7;
         }
 
-        .pic-caption {
-            text-align: center;
-            padding: 10px 20px;
+        .portfolio-modal:hover {
+            filter: grayscale(0%);
+            transform: scale(1.1);
         }
-
-        /*contact*/
-        .fab:hover {
-            opacity: 0.8;
+        footer .fab {
+            color: white;
         }
-
-        /*scroll navbar*/
-        .background-nav {
-            background-color: rgba(255,255,255,0.8);
-        }
-        .background-nav .navbar-brand{
-            color: black;
-            font-size: 20px;
-        }
-        .background-nav .nav-item > .nav-link {
-            color: black;
-            font-size: 15px;
+        footer .fab:hover {
+            opacity: 0.7;
         }
     </style>
 </head>
-
-<body data-spy="scroll" data-offset="50" data-target=".navbar">
-
+<body class="bg-info">
 <!--header-->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <a href="#home" class="navbar-brand ml-4">Site Logo</a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar">Menu
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse text-uppercase" id="navbar">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#services">Services</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown">Portfolio</a>
-                <div class="dropdown-menu">
-                    <a href="#portfolio" class="dropdown-item">Portfolio</a>
-                    <a href="#portfolio" class="dropdown-item">Portfolio</a>
-                    <a href="#portfolio" class="dropdown-item">Portfolio</a>
-                    <a href="#portfolio" class="dropdown-item">Portfolio</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<div class="container-fluid mt-4">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <i class="fas fa-yin-yang fa-3x mr-1"></i>
+            <a href="#" class="navbar-brand text-uppercase">Site Logo</a>
+            <a href="#" class="lang">AZ</a>
+            <a href="#" class="lang">RU</a>
+            <button type="button" class="navbar-toggler" data-target="#navbar" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
 
-<header class="masthead p-5" id="home">
+<!--home-->
+<section class="content-section mt-5" id="home">
     <div class="container">
-        <div class="row text-center text-white">
-            <div class="col-md-5 offset-md-1 mb-0">
-                <h2 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-                    quo inventore
-                    harum
-                    ex magni, dicta impedit.</h2>
-                <a href="#about" class="btn btn-light text-white px-5 py-2 mb-5" style="border-radius: 15px">View
-                    More
-                </a>
-            </div>
-            <div class="col-md-4 ">
-                <i class="fas fa-laptop-code fa-10x"></i>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!--About-->
-<section class="content-section bg-dark text-white text-center" id="about">
-    <div class="container-fluid">
-        <div class="content-section-heading">
-            <h2 class="mt-0 p-3" style="font-family: 'Sedgwick Ave Display', cursive;">About Us</h2>
-            <em class="text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem</em>
-        </div>
-        <hr>
         <div class="row">
-            <div class="col-md-2 offset-md-1">
-                <i class="fas fa-mobile-alt fa-10x"></i>
+            <div class="col-md-3 mt-1">
+                <img src="https://data.whicdn.com/images/337361346/original.jpg" alt="" class="rounded pic"
+                     style="height: 450px">
+                <div class="image-cap">
+                    <h3>Internet</h3>
+                    <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <button type="button" class="btn btn-warning">Join now</button>
+                    <a href="#" class="text-capitalize">Learn more <i class="fas fa-angle-right ml-2"></i></a>
+                </div>
             </div>
-            <div class="col-md-8 mt-3">
-                <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem
-                    ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+            <div class="col-md-3 mt-1">
+                <img src="https://data.whicdn.com/images/334336950/original.jpg" alt="" class="rounded pic"
+                     style="height: 450px">
+                <div class="image-cap1">
+                    <h3>Television</h3>
+                    <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 offset-md-1 mt-5">
-                <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem
-                    ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+            <div class="col-md-3 mt-1">
+                <img src="https://data.whicdn.com/images/332327071/original.jpg" alt="" class="rounded pic"
+                     style="height: 450px">
+                <div class="image-cap1">
+                    <h3>Tv App</h3>
+                    <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
             </div>
-            <div class="col-md-2 fa-10x">
-                <i class="fas fa-tv"></i>
+            <div class="col-md-3 mt-1">
+                <img src="https://data.whicdn.com/images/329056982/original.jpg" alt="" class="rounded pic"
+                     style="height: 450px">
+                <div class="image-cap1">
+                    <h3>Business</h3>
+                    <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!--Services-->
-<section class="content-section text-center bg-light" id="services">
-    <div class="container">
-        <div class="content-section-heading">
-            <h2 class="mt-0 p-3" style="font-family: 'Sedgwick Ave Display', cursive;">Services</h2>
-            <em class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem</em>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <i class="far fa-credit-card fa-10x"></i>
-                <h3 class="mt-2" style="font-family: 'EB Garamond', serif; color: #f416b1">Credit Card</h3>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-balance-scale fa-10x"></i>
-                <h3 class="mt-2" style="font-family: 'EB Garamond', serif; color: #f416b1">Balance</h3>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-layer-group fa-10x"></i>
-                <h3 class="mt-2" style="font-family: 'EB Garamond', serif; color: #f416b1">Design</h3>
-                <p class="lead mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
+<!--abour-->
+<section class="content-section mt-5 text-center">
+    <div class="container-fluid">
+        <h3 class="mt-5">About</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <div class="row my-4">
+            <div class="col-md-5">
+                <em class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
                     amet, consectetur
                     adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit.</p>
+                    amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+            </div>
+            <div class="col-md-6">
+                <img src="https://data.whicdn.com/images/337425817/original.jpg" class="d-block rounded-circle"
+                     style="width: 200px" height="150px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 border-right border-dark mt-2 mb-4" style="height: 80px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 offset-md-5">
+                <img src="https://data.whicdn.com/images/333092243/original.jpg" class="d-block rounded-circle"
+                     style="width: 200px" height="150px">
+            </div>
+            <div class="col-md-5 offset-md-1 mb-4">
+                <em class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
+                    amet, consectetur
+                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
             </div>
         </div>
     </div>
 </section>
 
 <!--portfolio-->
-<section class="content-section text-center bg-success" id="portfolio">
-    <div class="container-fluid">
-        <div class="content-section-heading">
-            <h2 class="text-white mt-0 p-3" style="font-family: 'Sedgwick Ave Display', cursive;">Portfolio</h2>
-            <em class="text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+<section class="content-section mt-4 text-center p-3">
+    <div class="container">
+        <h4>Gallery</h4>
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <div class="portfolio-modal">
+                    <div class="portfolio-item">
+                        <a href="https://data.whicdn.com/images/337451296/original.jpg" style="color: #000;"
+                           data-lightbox="myGallery" data-title="New York" height="250">
+                            <img src="https://data.whicdn.com/images/337451296/original.jpg" alt=""
+                                 class="d-block w-100 rounded">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-caption">
+                        New York
+                    </div>
+                </div>\
+            </div>
+            <div class="col-md-3">
+                <div class="portfolio-modal">
+                    <div class="portfolio-item">
+                        <a href="https://data.whicdn.com/images/337463288/original.jpg" style="color: #000;"
+                           data-lightbox="myGallery" data-title="London">
+                            <img src="https://data.whicdn.com/images/337463288/original.jpg" alt=""
+                                 class="d-block w-100 rounded" height="250">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-caption">
+                        London
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="portfolio-modal">
+                    <div class="portfolio-item">
+                        <a href="https://data.whicdn.com/images/337445989/original.jpg" style="color: #000;"
+                           data-lightbox="myGallery" data-title="Berlin">
+                            <img
+                                src="https://data.whicdn.com/images/337445989/original.jpg" alt=""
+                                class="d-block w-100 rounded" height="250">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-caption">
+                        Berlin
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="portfolio-modal">
+                    <div class="portfolio-item">
+                        <a href="https://data.whicdn.com/images/335182872/original.jpg" style="color: #000;"
+                           data-lightbox="myGallery" data-title="Tokio">
+                            <img
+                                src="https://data.whicdn.com/images/335182872/original.jpg" alt=""
+                                class="d-block w-100 rounded" height="250">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-caption">
+                        Tokio
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="row mt-3">
-            <div class="col-md-3 mt-2">
-                <div class="image">
-                    <img src="https://data.whicdn.com/images/337161211/original.jpg" alt=""
-                         class="d-block w-100 pic rounded">
-                    <div class="pic-caption">
-                        <a href="#">Lorem ipsum dolor sit amet.</a>
+            <div class="col-md-3">
+                <div class="portfolio-modal">
+                    <div class="portfolio-item">
+                        <a href="https://data.whicdn.com/images/333208718/original.jpg" style="color: #000;"
+                           data-lightbox="myGallery" data-title="Hamburg">
+                            <img
+                                src="https://data.whicdn.com/images/333208718/original.jpg" alt=""
+                                class="d-block w-100 rounded" height="250">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-caption">
+                       Hamburg
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mt-2">
-                <div class="image">
-                    <img src="https://data.whicdn.com/images/337067494/original.jpg" alt=""
-                         class="d-block w-100 pic rounded">
-                    <div class="pic-caption">
-                        <a href="#">Lorem ipsum dolor sit amet.</a>
+            <div class="col-md-3">
+                <div class="portfolio-modal">
+                    <div class="portfolio-item">
+                        <a href="https://data.whicdn.com/images/336945184/original.jpg" style="color: #000;"
+                           data-lightbox="myGallery" data-title="Copenhagen">
+                            <img
+                                src="https://data.whicdn.com/images/336945184/original.jpg" alt=""
+                                class="d-block w-100 rounded" height="250">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-caption">
+                        Copenhagen
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mt-2">
-                <div class="image">
-                    <img src="https://data.whicdn.com/images/337103865/original.jpg" alt=""
-                         class="d-block w-100 pic rounded">
-                    <div class="pic-caption">
-                        <a href="#">Lorem ipsum dolor sit amet.</a>
+            <div class="col-md-3">
+                <div class="portfolio-modal">
+                    <div class="portfolio-item">
+                        <a href="https://data.whicdn.com/images/337446466/original.jpg" style="color: #000;"
+                           data-lightbox="myGallery" data-title="Amsterdam">
+                            <img
+                                src="https://data.whicdn.com/images/337446466/original.jpg" alt=""
+                                class="d-block w-100 rounded" height="250">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-caption">
+                        Amsterdam
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-5 mt-2">
-                <div class="image">
-                    <img src="https://data.whicdn.com/images/337112723/original.jpg" alt=""
-                         class="d-block w-100 pic rounded">
-                    <div class="pic-caption">
-                        <a href="#">Lorem ipsum dolor sit amet.</a>
+            <div class="col-md-3">
+                <div class="portfolio-modal">
+                    <div class="portfolio-item">
+                        <a href="https://data.whicdn.com/images/337447425/original.jpg" style="color: #000;"
+                           data-lightbox="myGallery" data-title="Disneyland">
+                            <img
+                                src="https://data.whicdn.com/images/337447425/original.jpg" alt=""
+                                class="d-block w-100 rounded" height="250">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-caption">
+                        Disneyland
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
+
 
 <!--contact-->
-<section class="content-section text-center bg-light" id="contact">
-    <div class="container">
-        <div class="content-section-heading">
-            <h2 class="mt-0 p-3" style="font-family: 'Sedgwick Ave Display', cursive;">Contact</h2>
-            <em class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem</em>
-        </div>
-        <div class="row mt-5">
-            <div class="col-md-3">
-                <a href="#">
-                    <i class="fab fa-facebook fa-10x" style="color: #3B5998;"></i>
-                </a>
+<section class="content-section text-center">
+    <div class="container-fluid">
+        <h3>Contact</h3>
+        <div class="row my-4">
+            <div class="col-md-4">
+                <i class="fas fa-phone-alt"> XXX-XX-XX</i>
             </div>
-            <div class="col-md-3">
-                <a href="#">
-                    <i class="fab fa-twitter fa-10x" style="color: #55ACEE"></i>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#">
-                    <i class="fab fa-instagram fa-10x" style="color: #d728ab"></i>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#">
-                    <i class="fab fa-linkedin fa-10x" style="color: #007bb5"></i>
-                </a>
+            <div class="col-md-4">
+                <i class="fas fa-map-marker-alt"> Baku, Azerbaijan</i>
             </div>
         </div>
-        <div class="row mt-5 text-muted mb-4">
-            <div class="col-md-7 offset-md-2">
-                <i class="fas fa-map-marker-alt"></i>
-                <a href="https://www.google.com/maps/place/Baker+St,+Marylebone,+London,+UK/@51.5206185,-0.1588731,17z/data=!4m5!3m4!1s0x48761ace9a2e67d7:0xd458de8d0fdc498e!8m2!3d51.5205217!4d-0.1567595"
-                target="_blank">
-                    221b Baker street, London UK!
-                </a>
-            </div>
-        </div>
+        <div id="map" style="width: 100%; height: 200px"></div>
     </div>
 </section>
-
 <!--footer-->
-<footer class="footer bg-dark p-3 text-white text-center">
-    <span>Copyright &copy;2019</span>
-    <div class="container-fluid">
-        <div class="row mt-5">
-            <div class="col-md-3">
-                <a href="#" class="text-danger">Terms</a><br>
-                <a href="#" class="text-danger">Privacy Policy</a><br>
-                <a href="#" class="text-danger">Lorem Ipsum</a><br>
-                <a href="#" class="text-danger">Lorem Ipsum</a>
+<footer class="footer">
+    <div class="container-fluid bg-dark p-4 text-white">
+        <div class="row">
+            <div class="col-md-3 offset-md-1">
+                <span>Copyright 2019</span>
             </div>
-            <div class="col-md-3">
-                <a href="#" class="text-danger">Lorem Ipsum</a><br>
-                <a href="#" class="text-danger">Lorem Ipsum</a><br>
-                <a href="#" class="text-danger">Lorem Ipsum</a><br>
-                <a href="#" class="text-danger">Lorem Ipsum</a>
+            <div class="col-md-3 text-center">
+                <a href="#">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="#" class="ml-3">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#" class="ml-3">
+                    <i class="fab fa-linkedin-in fa-2x"></i>
+                </a>
             </div>
-            <div class="col-md-3">
-                <a href="#" class="text-danger">Lorem Ipsum</a><br>
-                <a href="#" class="text-danger">Lorem Ipsum</a><br>
-                <a href="#" class="text-danger">Lorem Ipsum</a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" class="text-danger">Lorem Ipsum</a>
+            <div class="col-md-4 offset-md-1">
+                <a href="#" class="text-white">Privacy Policy</a>
+                <a href="#" class="text-white ml-2">Terms</a>
             </div>
         </div>
     </div>
 </footer>
 
-
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW3u0VsxamcnQK21pkXQqFCfrNIIucF3Q&callback=initMap">
+</script>
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 40.409264, lng: 49.867092},
+            zoom: 8
+        });
+    }
+</script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -363,16 +440,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
-
-<script>
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop()) {
-            $('.navbar').addClass('background-nav');
-        } else {
-            $('.navbar').removeClass('background-nav');
-        }
-    });
-</script>
-</body>
-</html>
+    </body>
+    </html>
