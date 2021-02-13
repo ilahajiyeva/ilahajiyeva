@@ -103,8 +103,9 @@ html {
     /*home section styling*/
 .home {
     display: flex;
-    background: url("https://wallpaperaccess.com/full/403057.png") no-repeat center;
-    height: 150vh;
+    background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0)),url("https://scontent.fgyd1-1.fna.fbcdn.net/v/t1.0-9/135236817_2835719853351333_3464172992478814875_o.jpg?_nc_cat=101&ccb=3&_nc_sid=e3f864&_nc_ohc=HmCHnGzGcIMAX8TMZC-&_nc_ht=scontent.fgyd1-1.fna&oh=e72fad4ff64688023f2bd12e23b17c0d&oe=604D6029") no-repeat center;
+    background-size: cover;
+    height: 100vh;
     color: #fff;
     min-height: 500px;
     font-family: "Ubuntu", sans-serif;
