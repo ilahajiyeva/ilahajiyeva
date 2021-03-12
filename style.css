@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: 'Ubuntu', Serif;
+    font-weight: 400!important;
+    animation-duration: 5s;
+}
+
+.header {
+    height: 100vh;
+    background-image:linear-gradient(to right bottom, rgba(0,0,0,.8), rgb(255,255,255,.8)),
+    url("https://res.cloudinary.com/ilahajiyeva-com/image/upload/v1614173268/IMG_20201106_161938_968_pu84ij.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-logo {
+    margin-left:25px;
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 12px 12px 12px 25px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: all 0.3s ease;
+}
+.sidebar a .lni {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: silver;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.4);
+}
+.sidebar a .lni small {
+    text-transform: capitalize;
+}
+
+.sidebar a:hover {
+    color: #000;
+
+}
+
+
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+    padding: 15px 20px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    transition: all 0.5s ease;
+}
+
+.openbtn:hover {
+    color: #818181;
+    background-color: #fff;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+/***HOME SECTION styling****/
+.header-content {
+    margin-left: 150px;
+    margin-top: 100px;
+    position: relative;
+}
+.home-content .text-1 {
+    font-size: 80px;
+}
+.home-content .text-2 {
+    font-size: 40px;
+}
+.home-content a {
+    border-radius: 50px;
+    width: 20%;
+    font-size: 30px;
+    transition: all .3s ease;
+}
+.home-content a:hover {
+    background-color: transparent;
+    color: #fff;
+}
+.header-links {
+    position: absolute;
+    top: 90%;
+    left: 70%;
+}
+.header-links .lni {
+    font-size: 30px;
+    margin-right: 20px;
+    transition: all .3s ease;
+}
+.header-links .lni:hover {
+    color: white;
+}
+
+
+
+/*******ABOUT SECTION STYLING*******/
+.about-section h1 {
+    font-weight: 700;
+    font-size: 50px;
+}
+.about-section p {
+    font-weight: 50;
+    color: #8c8c8c;
+    font-size: 20px;
+}
+.about-img {
+    width: 75%;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 30px;
+    box-shadow: 3px 0 3px #8c8c8c;
+}
+.about-content {
+    font-size: 20px;
+}
+.about-content span {
+    color: #777777;
+}
+.about-content .btn {
+    width: 150px;
+    box-shadow: 3px 3px 3px  #8c8c8c;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all .5s ease;
+}
+.about-content , .skills-section , .contact-section .btn:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+/****SKILLS SECTION****/
+
+.skill-content .skill {
+    left: 6%;
+}
+/****CONTACT SECTION*****/
+.contact-section .lni {
+    font-size: 40px;
+    font-weight: 100;
+}
+.contact-section form input, textarea {
+    box-shadow: 3px 3px 3px silver;
+}
+
+
+/***WORKS SECTION***/
+
+.works-image {
+    position: relative;
+}
+
+.works-image img {
+    display: block;
+    width: 100%;
+    height:  250px;
+    border-radius: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 25%;
+    bottom: 0;
+    left: 25%;
+    right: 0;
+    height: 50%;
+    width: 50%;
+    opacity: 0;
+    background-color: rgba(255,255,255,.8);
+    border-radius: 5px;
+    transition: transform .7s;
+}
+
+.works-image:hover .overlay {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.text {
+    color: #000;
+    font-size: 15px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-icon {
+    background-color: #000;
+    width: 15%;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-icon:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+.text-icon a {
+    color: #fff;
+}
