@@ -12,11 +12,14 @@ body {
     font-size: 16px;
     font-family: 'Ubuntu', Serif;
     font-weight: 400!important;
+    -webkit-animation-duration: 5s;
     animation-duration: 5s;
 }
 
 .header {
     height: 100vh;
+    background-image:-webkit-linear-gradient(left top, rgba(0,0,0,.8), rgb(255,255,255,.8)),
+    url("https://res.cloudinary.com/ilahajiyeva-com/image/upload/v1614173268/IMG_20201106_161938_968_pu84ij.jpg");
     background-image:linear-gradient(to right bottom, rgba(0,0,0,.8), rgb(255,255,255,.8)),
     url("https://res.cloudinary.com/ilahajiyeva-com/image/upload/v1614173268/IMG_20201106_161938_968_pu84ij.jpg");
     background-repeat: no-repeat;
@@ -34,6 +37,7 @@ body {
     left: 0;
     background-color: #f4f4f4;
     overflow-x: hidden;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     padding-top: 60px;
 }
@@ -44,6 +48,7 @@ body {
     font-size: 25px;
     color: #818181;
     display: block;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .sidebar a .lni {
@@ -80,6 +85,7 @@ body {
     padding: 15px 20px;
     border-radius: 50%;
     background-color: #f4f4f4;
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -89,6 +95,7 @@ body {
 }
 
 #main {
+    -webkit-transition: margin-left .5s;
     transition: margin-left .5s;
     padding: 16px;
 }
@@ -108,6 +115,7 @@ body {
     border-radius: 50px;
     width: 20%;
     font-size: 30px;
+    -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
 .home-content a:hover {
@@ -122,6 +130,7 @@ body {
 .header-links .lni {
     font-size: 30px;
     margin-right: 20px;
+    -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
 .header-links .lni:hover {
@@ -158,6 +167,7 @@ body {
     box-shadow: 3px 3px 3px  #8c8c8c;
     border-radius: 10px;
     padding: 10px;
+    -webkit-transition: all .5s ease;
     transition: all .5s ease;
 }
 .about-content , .skills-section , .contact-section .btn:hover {
@@ -204,11 +214,15 @@ body {
     opacity: 0;
     background-color: rgba(255,255,255,.8);
     border-radius: 5px;
+    -webkit-transition: -webkit-transform .7s;
+    transition: -webkit-transform .7s;
     transition: transform .7s;
+    transition: transform .7s, -webkit-transform .7s;
 }
 
 .works-image:hover .overlay {
     opacity: 1;
+    -webkit-transform: scale(1.5);
     transform: scale(1.5);
 }
 
@@ -219,7 +233,6 @@ body {
     top: 60%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -232,7 +245,6 @@ body {
     top: 30%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -243,6 +255,7 @@ body {
 .text-icon a {
     color: #fff;
 }
+
 
 /*FOOTER SECTION*/
 footer {
@@ -255,4 +268,3 @@ footer span {
     color: #000;
     font-weight: 500;
 }
-
