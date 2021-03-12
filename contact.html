@@ -2,140 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ilahajiyeva | portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <title>Ilaha Hajiyeva</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquery.css">
 </head>
+<body class="bg-light">
 
-<body>
-<div class="scroll-up-btn">
-    <i class="fas fa-angle-up"></i>
+<div id="mySidebar" class="sidebar">
+    <img src="logo_transparent.png" height="80rem" width="80rem" class="header-logo"/>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="index.html"><i class="lni lni-home"><br>
+        <small>home</small>
+    </i></a>
+    <a href="about.html"><i class="lni lni-user"><br>
+        <small>about</small>
+    </i></a>
+    <a href="resume.html"><i class="lni lni-certificate"><br>
+        <small>skills</small>
+    </i></a>
+    <a href="work.html"><i class="lni lni-gallery"><br>
+        <small>works</small>
+    </i></a>
+    <a href="contact.html"><i class="lni lni-envelope"><br>
+        <small>contact</small>
+    </i></a>
 </div>
-<nav class="navbar">
-    <div class="max-width">
-        <div class="logo">
-            <a href="index.html">Portfo<span>lio</span></a>
-        </div>
-        <ul class="menu">
-            <li>
-                <a href="index.html" class="menu-btn">Home</a>
-            </li>
-            <li>
-                <a href="about.html" class="menu-btn">About</a>
-            </li>
-            <li>
-                <a href="service.html" class="menu-btn">Services</a>
-            </li>
-            <li>
-                <a href="skills.html" class="menu-btn">Skills</a>
-            </li>
-            <li>
-                <a href="certificate.html" class="menu-btn">Certificates</a>
-            </li>
-            <li>
-                <a href="contact.html" class="menu-btn">Contact</a>
-            </li>
-        </ul>
-        <div class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </div>
-    </div>
-</nav>
 
-<!--home section start-->
-<section class="home" id="home">
-    <div class="max-width">
-        <div class="home-content">
-            <div class="text-1">Hello, my name is</div>
-            <div class="text-2">Ilaha Hajiyeva</div>
-            <div class="text-3">I'm a <span class="typing"></span></div>
-            <a href="#">Hire Me</a>
+<div id="main">
+    <button class="openbtn" onclick="openNav()"><i class="lni lni-menu"></i></button>
+</div>
+
+<div class="container-fluid mb-5 contact-section animate__animated animate__fadeInRight" id="contact">
+    <h1 class="text-center">Contact Me</h1>
+    <p class="text-center">Get in touch</p>
+
+    <div class="container">
+        <div class="row mt-5 text-center">
+            <div class="col-md-3 col-sm-12">
+                <i class="lni lni-phone"></i>
+                <p>xxx-xxx-xx-xx</p>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <i class="lni lni-map-marker"></i>
+                <p>Baku, Azerbaijan</p>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <i class="lni lni-envelope"></i>
+                <p>hajiyevailahe@gmail.com</p>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <i class="lni lni-linkedin-original"></i>
+                <p>https://www.linkedin.com/in/ilahajiyeva</p>
+            </div>
         </div>
-    </div>
-</section>
 
-
-<!--contact section start-->
-<section class="contact" id="contact">
-    <div class="max-width">
-        <h2 class="title">Contact me</h2>
-        <div class="contact-content">
-            <div class="column left">
-                <div class="text">Get in Touch</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <div class="icons">
-                    <div class="row">
-                        <i class="fas fa-user"></i>
-                        <div class="info">
-                            <div class="head">Name</div>
-                            <div class="sub-title">Ilaha Hajiyeva</div>
-                        </div>
+        <form>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 offset-md-2">
+                        <label for="name"></label>
+                        <input type="text" class="form-control" id="name" placeholder="Your name" required>
                     </div>
-                    <div class="row">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="info">
-                            <div class="head">Address</div>
-                            <div class="sub-title">Baku, Azerbaijan</div>
-                        </div>
+                    <div class="col-md-4 col-sm-12">
+                        <label for="email"></label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
                     </div>
-                    <div class="row">
-                        <i class="fas fa-envelope"></i>
-                        <div class="info">
-                            <div class="head">Email</div>
-                            <div class="sub-title">hajiyevailahe@gmail.com</div>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-12 offset-md-2 mt-2">
+                        <input type="text" class="form-control" placeholder="Subject" required>
                     </div>
-                    <div class="row">
-                        <i class="fab fa-linkedin"></i>
-                        <div class="info">
-                            <div class="head">Linkedin</div>
-                            <div class="sub-title">https://www.linkedin.com/in/ilahajiyeva/</div>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-12 offset-md-2 mt-2">
+                        <textarea class="form-control" placeholder="Your message" id="textar" required=""></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 offset-md-2 col-sm-12 mt-3">
+                        <button type="submit" class="btn btn-secondary">Send Message</button>
                     </div>
                 </div>
             </div>
-            <div class="column right">
-                <div class="text">Message me</div>
-                <form action="#">
-                    <div class="fields">
-                        <div class="field name">
-                            <input type="text" placeholder="Name" required>
-                        </div>
-                        <div class="field email">
-                            <input type="email" placeholder="Email" required>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <input type="text" placeholder="Subject" required>
-                    </div>
-                    <div class="field textarea">
-                        <textarea cols="30" rows="10" placeholder="Your message.." required></textarea>
-                    </div>
-                    <div class="button">
-                        <button type="submit">Send message</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+        </form>
     </div>
-</section>
-
-<!--footer section start-->
-<footer>
-    <span>Created by
-        <a href="https://www.linkedin.com/in/ilahajiyeva/" target="_blank">ilahajiyeva</a> | <span
-                class="fas fa-copyright"> 2021</span>
-    </span>
-</footer>
+</div>
 
 
+<!--HOME SECTION-->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
