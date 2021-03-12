@@ -243,3 +243,16 @@ body {
 .text-icon a {
     color: #fff;
 }
+
+/*FOOTER SECTION*/
+footer {
+    text-align: center;
+    color: #818181;
+    padding: 20px;
+    font-size: 15px;
+}
+footer span {
+    color: #000;
+    font-weight: 500;
+}
+
