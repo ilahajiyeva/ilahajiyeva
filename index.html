@@ -2,283 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ilahajiyeva | portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Ilaha Hajiyeva</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquery.css">
 </head>
+<body class="bg-light">
 
-<body>
-<div class="scroll-up-btn">
-    <i class="fas fa-angle-up"></i>
-</div>
-<nav class="navbar">
-    <div class="max-width">
-        <div class="logo">
-            <a href="index.html">Portfo<span>lio</span></a>
+<header class="header" id="home">
+    <div id="mySidebar" class="sidebar">
+            <img src="logo_transparent.png" height="80rem" width="80rem" class="header-logo"/>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html"><i class="lni lni-home"><br>
+            <small>home</small>
+        </i></a>
+        <a href="about.html"><i class="lni lni-user"><br>
+            <small>about</small>
+        </i></a>
+        <a href="resume.html"><i class="lni lni-certificate"><br>
+            <small>skills</small>
+        </i></a>
+        <a href="work.html"><i class="lni lni-gallery"><br>
+            <small>works</small>
+        </i></a>
+        <a href="contact.html"><i class="lni lni-envelope"><br>
+            <small>contact</small>
+        </i></a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()"><i class="lni lni-menu"></i></button>
+    </div>
+
+
+    <div class="header-content  animate__animated animate__fadeInRight">
+        <div class="home-content text-white ml-4">
+            <div class="text-1">Ilaha Hajiyeva</div>
+            <div class="text-2">I'm a <span class="typing"></span></div>
+            <a href="#" class="btn btn-light mt-5">Hire me</a>
         </div>
-        <ul class="menu">
-            <li>
-                <a href="index.html" class="menu-btn">Home</a>
-            </li>
-            <li>
-                <a href="about.html" class="menu-btn">About</a>
-            </li>
-            <li>
-                <a href="service.html" class="menu-btn">Services</a>
-            </li>
-            <li>
-                <a href="skills.html" class="menu-btn">Skills</a>
-            </li>
-            <li>
-                <a href="certificate.html" class="menu-btn">Certificates</a>
-            </li>
-            <li>
-                <a href="contact.html" class="menu-btn">Contact</a>
-            </li>
-        </ul>
-        <div class="menu-btn">
-            <i class="fas fa-bars"></i>
+
+        <div class="header-links">
+            <a href="#" class="text-dark"><i class="lni lni-facebook"></i></a>
+            <a href="#" class="text-dark"><i class="lni lni-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/ilahajiyeva" class="text-dark" target="_blank"><i class="lni lni-linkedin"></i></a>
+            <a href="https://www.instagram.com/ilahajiyeva" class="text-dark" target="_blank"><i class="lni lni-instagram"></i></a>
         </div>
     </div>
-</nav>
 
-<!--home section start-->
-<section class="home" id="home">
-    <div class="max-width">
-        <div class="home-content">
-            <div class="text-1">Hello, my name is</div>
-            <div class="text-2">Ilaha Hajiyeva</div>
-            <div class="text-3">I'm a <span class="typing"></span></div>
-            <a href="#">Hire Me</a>
-        </div>
-    </div>
-</section>
+</header>
 
-<!--about section start-->
-<section class="about" id="about">
-    <div class="max-width">
-        <h2 class="title">About me</h2>
-        <div class="about-content">
-            <div class="column left">
-                <img src="https://scontent.fgyd1-1.fna.fbcdn.net/v/t1.0-9/150162808_2864838057106179_3821204370019352378_o.jpg?_nc_cat=106&ccb=3&_nc_sid=8bfeb9&_nc_ohc=krGk3OkaF-cAX_2zP4K&_nc_ht=scontent.fgyd1-1.fna&oh=ba4a9c9e47d9d91a27e12329ebfc225c&oe=604F48C1" alt=""/>
-            </div>
-            <div class="column right">
-                <div class="text">I'm Ilaha and I'm a <span>Front-end Developer</span></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices lorem at ullamcorper rhoncus.
-                    In dignissim risus tincidunt blandit facilisis. Suspendisse dignissim iaculis cursus. Integer id
-                    lectus consequat, accumsan augue eu, ultricies diam. Aenean accumsan lacus eu ante auctor, ut varius
-                    purus mollis. Phasellus hendrerit ac tortor tempor pretium. Maecenas nec tellus auctor, finibus
-                    libero commodo, viverra nisl.
-                </p>
-                <a href="#">Download CV</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--services section start-->
-<section class="services" id="services">
-    <div class="max-width">
-        <h2 class="title">My services</h2>
-        <div class="services-content">
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-paint-brush"></i>
-                    <div class="text">Web Design</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices lorem at ullamcorper
-                        rhoncus.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-chart-line"></i>
-                    <div class="text">Advertising</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices lorem at ullamcorper
-                        rhoncus.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-code"></i>
-                    <div class="text">Apps Design</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices lorem at ullamcorper
-                        rhoncus.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!--skills section start-->
-<section class="skills" id="skills">
-    <div class="max-width">
-        <h2 class="title">My Skills</h2>
-        <div class="skills-content">
-            <div class="column left">
-                <div class="text">My creative skills & experience. </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices lorem at ullamcorper
-                    rhoncus.</p>
-                <a href="#home">Read more</a>
-            </div>
-
-            <div class="column right">
-                <div class="bars">
-                    <div class="info">
-                        <span>HTML</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="line html"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>CSS</span>
-                        <span>60%</span>
-                    </div>
-                    <div class="line css"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>Javascript</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="line js"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>Jquery</span>
-                        <span>40%</span>
-                    </div>
-                    <div class="line jquery"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>Bootstrap</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="line bootsrap"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--tesma section start-->
-<section class="teams" id="teams">
-    <div class="max-width">
-        <h2 class="title">Certificates</h2>
-        <div class="carousel owl-carousel">
-            <div class="card">
-                <div class="box">
-                    <img src="https://africademics.com/wp-content/uploads/2019/11/Partner_Logos.jpg" alt="">
-                    <div class="text">Coursera</div>
-                    <p><a href="https://www.coursera.org/account/accomplishments/certificate/VZ57MM8QXTED"
-                          target="_blank">Front-End Web UI Frameworks and Tools: Bootstrap 4 (with Honors)</a></p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="box">
-                    <img src="https://africademics.com/wp-content/uploads/2019/11/Partner_Logos.jpg" alt="">
-                    <div class="text">Coursera</div>
-                    <p><a href="https://www.coursera.org/account/accomplishments/certificate/ZQUJZCMW7YXU"
-                          target="_blank">HTML, CSS and Javascript for Web Developers</a></p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="box">
-                    <img src="https://africademics.com/wp-content/uploads/2019/11/Partner_Logos.jpg" alt="">
-                    <div class="text">Coursera</div>
-                    <p><a href="https://www.coursera.org/account/accomplishments/certificate/XF4GH358ZZTL"
-                          target="_blank">Responsive Website Basics: Code with HTML, CSS, and JavaScript</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--contact section start-->
-<section class="contact" id="contact">
-    <div class="max-width">
-        <h2 class="title">Contact me</h2>
-        <div class="contact-content">
-            <div class="column left">
-                <div class="text">Get in Touch</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <div class="icons">
-                    <div class="row">
-                        <i class="fas fa-user"></i>
-                        <div class="info">
-                            <div class="head">Name</div>
-                            <div class="sub-title">Ilaha Hajiyeva</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="info">
-                            <div class="head">Address</div>
-                            <div class="sub-title">Baku, Azerbaijan</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="fas fa-envelope"></i>
-                        <div class="info">
-                            <div class="head">Email</div>
-                            <div class="sub-title">hajiyevailahe@gmail.com</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="fab fa-linkedin"></i>
-                        <div class="info">
-                            <div class="head">Linkedin</div>
-                            <div class="sub-title">https://www.linkedin.com/in/ilahajiyeva/</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column right">
-                <div class="text">Message me</div>
-                <form action="#">
-                    <div class="fields">
-                        <div class="field name">
-                            <input type="text" placeholder="Name" required>
-                        </div>
-                        <div class="field email">
-                            <input type="email" placeholder="Email" required>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <input type="text" placeholder="Subject" required>
-                    </div>
-                    <div class="field textarea">
-                        <textarea cols="30" rows="10" placeholder="Your message.." required></textarea>
-                    </div>
-                    <div class="button">
-                        <button type="submit">Send message</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--footer section start-->
-<footer>
-    <span>Created by
-        <a href="https://www.linkedin.com/in/ilahajiyeva/" target="_blank">ilahajiyeva</a> | <span
-                class="fas fa-copyright"> 2021</span>
-    </span>
-</footer>
+<!--HOME SECTION-->
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
