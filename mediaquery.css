@@ -51,7 +51,7 @@
 @media (max-width: 510px) {
     .header-content {
         margin-left: 0;
-        margin-top: 0;
+        margin-top: 90px;
         text-align: center;
     }
     .home-content .text-1 {
@@ -66,7 +66,7 @@
         font-size: 20px;
     }
     .header-links {
-        margin-top: 60px;
+        margin-top: 70px;
         left: 35%;
     }
     .header-links .lni {
