@@ -78,4 +78,11 @@
     .sidebar a .lni {
         padding: 5px;
     }
+    .skill-content {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    .skill-content h2 {
+        text-align: center;
+    }
 }
