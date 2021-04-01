@@ -81,8 +81,12 @@
     .skill-content {
         margin-top: 15px;
         margin-bottom: 5px;
+        margin-left: 40px;
     }
     .skill-content h2 {
         text-align: center;
+    }
+    footer {
+        margin-top: 100px
     }
 }
