@@ -1,15 +1,4 @@
-/**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -225,7 +214,7 @@ h6 {
 
 .header .header-toggle {
   color: var(--contrast-color);
-  background-color: var(--accent-color);
+  background-color: black;
   font-size: 22px;
   display: flex;
   align-items: center;
@@ -243,7 +232,7 @@ h6 {
 
 .header .header-toggle:hover {
   color: var(--contrast-color);
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+  background-color: rgb(161, 143, 92);
 }
 
 /*--------------------------------------------------------------
@@ -428,7 +417,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: black;
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -442,9 +431,10 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: rgb(161, 143, 92);
   color: var(--contrast-color);
 }
+
 
 .scroll-top.active {
   visibility: visible;
@@ -530,7 +520,7 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--accent-color);
+  background: black;
   left: 0;
   bottom: 0;
 }
@@ -686,7 +676,7 @@ section,
 # Skills Section
 --------------------------------------------------------------*/
 .skills {
-    background-color: rgb(238, 229, 218);;
+    background-color: rgb(238, 229, 218);
 }
 .skills .progress {
   height: 60px;
